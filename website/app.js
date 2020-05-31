@@ -31,7 +31,6 @@ function action(d){
   const newCountry =  document.getElementById('zip').value;
   getCountry(url, newCountry, key)
   .then(function(data) {
-    console.log(feeling)
     postData('/add', {temperature: data.main.temp, date: newDate, response: feeling[0].value})
 
     updateUI() //update UI
