@@ -1,10 +1,9 @@
 // Setup empty JS object to act as endpoint for all routes
 projectData = {};
-
+require('dotenv').config();
 // Require Express to run server and routes
 const express = require('express')
 const bodyParser = require('body-parser')
-
 // Start up an instance of app
 const app = express()
 /* Middleware*/
@@ -32,7 +31,7 @@ function addWeather(req,res){
     projectData.res = req.body.response
 }
 // Setup Server
-port = 3000
+var port = process.env.PORT
 app.listen(port, running())
 
 function running() {
