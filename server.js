@@ -31,7 +31,7 @@ function addWeather(req,res){
     projectData.res = req.body.response
 }
 // Setup Server
-var port = process.env.PORT
+var port = process.env.PORT || 3000
 app.listen(port, running())
 
 function running() {
