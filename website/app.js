@@ -1,13 +1,13 @@
 /* Global Variables */
 const key = 'a05d9352534ed5de4f19dd4cdbc7de64';
-const url = 'https://api.openweathermap.org/data/2.5/weather?zip='
+const url = 'https://api.openweathermap.org/data/2.5/weather?units=imperial&zip='
 
 // Create a new date instance dynamically with JS
 let d = new Date();
-let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
+let newDate = (d.getMonth()+1) + '.'+ d.getDate()+'.'+ d.getFullYear();
 
 document.getElementById('generate').addEventListener('click', action);
-var feeling = document.getElementsByClassName('myInput');
+const feeling = document.getElementsByClassName('myInput');
 
 const postData = async ( url = '/add', data = {})=>{
   const response = await fetch(url, {
