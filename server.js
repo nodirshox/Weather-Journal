@@ -32,8 +32,9 @@ function addWeather(req,res){
     projectData.res = req.body.response
 }
 // Setup Server
-app.listen(3000, running())
+port = 3000
+app.listen(port, running())
 
 function running() {
-    console.log("Server started on " + 3000)
+    console.log("Server started on " + port)
 }
